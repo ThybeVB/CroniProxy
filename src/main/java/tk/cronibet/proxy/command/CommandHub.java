@@ -22,11 +22,11 @@ public class CommandHub extends Command {
         }
         ProxiedPlayer player = (ProxiedPlayer)sender;
 
-        if (player.getServer().getInfo().getName().equalsIgnoreCase("survival")) {
+        if (player.getServer().getInfo().getName().equalsIgnoreCase("creative")) {
             return;
         }
 
-        ServerInfo targetServer = ProxyServer.getInstance().getServerInfo("survival");
+        ServerInfo targetServer = ProxyServer.getInstance().getServerInfo("creative");
         player.connect(targetServer);
     }
 }
